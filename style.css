@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+    --primary: #00ff9d;
+    --bg: rgb(12, 12, 13);
+    --text: #f0f0f0;
+    --accent: #00cc7a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--bg);
+    cursor: none !important;
+}
+
+.cursor {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    background: #00f59e;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px #00f59e, 0 0 35px rgba(0, 245, 158, .6);
+    transition: width .25s ease, height .25s ease, background .25s ease;
+}
+
+.navbar {
+    color: white;
+    background: rgba(5, 5, 5, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    margin-bottom: 2rem;
+    position: sticky;
+    border-bottom: 1px solid rgba(0, 255, 157, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul a {
+    color: var(--text);
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar .name-logo {
+    font-family: 'Space-Grotesk', sans-serif;
+    font-weight: bolder;
+    font-size: 1.35rem;
+    background: linear-gradient(90deg, #00ff9d, #00cc7a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.3s ease;
+}
+
+.navbar .name-logo:hover {
+    transform: scale(1.045);
+}
+
+.navbar ul li {
+    padding: 16px;
+}
+
+
+.navbar ul a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.navbar ul a:hover::after {
+    width: 100%;
+}
+
+.navbar ul a:hover {
+    color: var(--primary);
+}
+
+.navbar .publisher {
+    font-size: 12px;
+    color: #555;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    margin-top: 5rem;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 0 5%;
+
+}
+
+.hero-content {
+    max-width: 900px;
+    z-index: 2;
+}
+
+.hero-content .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    margin: 2rem 0 2rem 0;
+    background: rgba(0, 255, 157, 0.1);
+    color: var(--primary);
+    border: 1px solid rgba(0, 255, 157, 0.2);
+    border-radius: 9999px;
+    padding: 10px 24px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    gap: 12px;
+    animation: badgefloat 4.5s ease-in-out infinite;
+}
+
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: var(--primary);
+}
+
+.hero-content p {
+    color: #b4b4b4;
+    font-size: 1.5rem;
+    margin: 1.5rem 0 3rem 0;
+}
+
+.hero-content .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.hero-content .btn {
+    padding: 20px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 999px;
+}
+
+.hero-content .cta-buttons .Primary-btn {
+    background: linear-gradient(90deg, #00ff9d, #00cc7a);
+    color: black;
+    box-shadow: 0 10px 30px rgba(0, 255, 157, 0.3);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    transition: all 0.35s ease-in-out;
+}
+
+.hero-content .cta-buttons .Primary-btn:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+.hero-content .cta-buttons .Secondary-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    transition: all 0.325s ease-in-out;
+}
+
+.hero-content .cta-buttons .Secondary-btn:hover{
+    transform: translateY(-8px) scale(1.05);
+    border: 2px solid var(--accent);
+}
+
+.hero-content .cta-buttons #MoveBtn #arrow{
+    position: absolute;
+    transition: all 0.3s ease-out;
+}
+
+.hero-content .cta-buttons #MoveBtn:hover #arrow{
+    margin-left: 5px;
+};
+
+.about{
+    background-color: rgba(15, 15, 15, 0.6);
+}
+
+.about h1{
+    color: var(--primary);
+    text-align: center;
+    font-size: 40px;
+}
+
+.about .about-grid{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    margin: 7rem;
+    align-items: center;
+    gap: 3rem;
+
+}
+
+.about .about-grid .about-img{
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 255, 157, 0.2);
+    border-radius: 24px;
+}
+.about .about-grid .about-img img{
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.75s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.about .about-grid .about-img:hover img{
+    transform: scale(1.08);
+}
+
+.about-text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-text-container .about-text{
+    color: white;
+    font-size: 1.25rem;
+    word-spacing: 4.25px;
+    letter-spacing: 0.4px;
+    font-weight: 350;
+}
+
+
+
+
+
+@keyframes badgefloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
