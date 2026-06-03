@@ -390,7 +390,7 @@ body {
 }
 
 .projects .project-boxes .box:hover {
-    transform: translateY(-16px);
+    transform: translateY(-10px);
     border: 2px solid var(--accent);
     box-shadow: 0 30px 70px rgba(0, 255, 157, 0.25);
 }
@@ -422,7 +422,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     padding: 12px;
 }
 
