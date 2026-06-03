@@ -453,7 +453,7 @@ body {
 }
 
 .project-boxes .box .overlay .overlay-content .tech-boxes .tech-box:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 
 }
 
